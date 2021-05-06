@@ -1,4 +1,4 @@
-package objectOriented1;
+package com.objectOriented1.circleTest;
 
 public class passObject {
     public void printAreas(circle c, int time) {

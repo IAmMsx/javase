@@ -1,4 +1,4 @@
-package constructor;
+package com.constructor;
 
 public class person {
 

@@ -1,4 +1,4 @@
-package objectOriented1;
+package com.objectOriented1;
 /**
  * 1. 面向对象编程的三条主线：
  * ① 类和类的成员：属性、方法、构造器、代码块、内部类

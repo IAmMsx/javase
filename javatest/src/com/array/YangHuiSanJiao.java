@@ -1,4 +1,4 @@
-package array;
+package com.array;
 
 public class YangHuiSanJiao {
     public static void main(String[] args) {
