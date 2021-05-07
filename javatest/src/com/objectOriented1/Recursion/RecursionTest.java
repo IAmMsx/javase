@@ -2,7 +2,7 @@ package com.objectOriented1.Recursion;
 
 /**
  * @Author msx
- * @Description //TODO
+ * @Description
  * @Date 15:39 2021/5/6
  * @Param
  * @return
@@ -33,7 +33,7 @@ public class RecursionTest {
     /**
      * @return int
      * @Author msx
-     * @Description //TODO
+     * @Description
      * @Date 15:55 2021/5/6
      * @Param [n]
      **/
