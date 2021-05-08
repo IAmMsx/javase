@@ -1,4 +1,4 @@
-package com.CustomerInformationManagement;
+package com.objectOriented1.CustomerInformationManagement;
 
 public class CustomerList {
     private Customer[] customers;

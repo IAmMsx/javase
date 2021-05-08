@@ -1,4 +1,4 @@
-package com.CustomerInformationManagement;
+package com.objectOriented1.CustomerInformationManagement;
 
 public class Customer {
     private String name;//姓名
