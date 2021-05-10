@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class PayrollSystem {
     public static void main(String[] args) {
+
         employee[] emees = new employee[10];
         emees[0] = new SalariedEmployee("li1", "0001", new MyData(98,1,24),100);
         emees[1] = new SalariedEmployee("li2", "0001", new MyData(98,2,24),100);
