@@ -19,4 +19,5 @@ public class Designer extends Programmer{
     public void setBonus(double bonus) {
         this.bonus = bonus;
     }
+
 }

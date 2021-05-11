@@ -1,6 +1,6 @@
 package com.objectOriented3.project3.domain;
 
-public class PC implements Equipment{
+public class PC implements Equipment {
     private String model;
     private String display;
 
@@ -27,8 +27,6 @@ public class PC implements Equipment{
 
     @Override
     public String getDescription() {
-        // TODO
-
-        return null;
+        return this.getModel() + "(" + this.getDisplay() + ")";
     }
 }

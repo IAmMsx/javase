@@ -1,6 +1,8 @@
 package com.objectOriented3.project3.domain;
 
-public class NoteBook implements Equipment{
+import org.junit.Test;
+
+public class NoteBook implements Equipment {
     private String model;
     private double price;
 
@@ -27,6 +29,7 @@ public class NoteBook implements Equipment{
 
     @Override
     public String getDescription() {
-        return null;
+        return this.getModel() + "(" + this.getPrice() + ")";
     }
+
 }

@@ -1,5 +1,7 @@
 package com.objectOriented3.project3;
 
+import org.junit.Test;
+
 import java.util.*;
 
 public class TSUtility {
@@ -69,6 +71,11 @@ public class TSUtility {
         }
 
         return line;
+    }
+
+    @Test
+    public void intTest(){
+        System.out.println("*****"+readInt());
     }
 }
 

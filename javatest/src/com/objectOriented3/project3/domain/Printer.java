@@ -1,6 +1,6 @@
 package com.objectOriented3.project3.domain;
 
-public class Printer implements Equipment{
+public class Printer implements Equipment {
     private String type;
     private String name;
 
@@ -27,7 +27,6 @@ public class Printer implements Equipment{
 
     @Override
     public String getDescription() {
-        // TODO
-        return null;
+        return this.getType() + "(" + this.getName() + ")";
     }
 }

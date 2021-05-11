@@ -6,7 +6,7 @@ public class Employee {
     private String name;
     private double salary;
 
-    public Employee(int id,String name,int age,double salary){
+    public Employee(int id, String name, int age, double salary) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -44,5 +44,10 @@ public class Employee {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return id + "\t" + name + "\t" + age + "\t" + salary + "\t";
     }
 }
