@@ -1,0 +1,18 @@
+string stringBuffer stringBuilder异同：
+String：不可变的字符序列
+stringBuffer：可变的字符序列，线程安全，效率偏低
+stringBuilder：可变的字符序列，线程不安全，效率高，jdk5.0新增
+
+源码:
+String str = new String();//char[] value = new char[0]
+String str = new String("abc");//char[] value = new char[]{'a','b','c'};
+
+StringBuffer sb1 = new StringBuffer();// char[] value = new char[16]
+sb1.append('a');//value[0]='a';
+sb1.append('b');//value[1]='b';
+
+StringBuffer sb2 = new StringBuffer("abc");// char[] value = new char["abc".length + 16]
+1. sout(sb2.length()) //3
+
+2. 扩容：默认情况下扩容为原来的2倍+2，同时将原有数组中的元素复制到新的数组中
+        建议使用指定容量构造器 StringBuffer(int capacity)

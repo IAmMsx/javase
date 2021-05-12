@@ -1,0 +1,16 @@
+
+String:
+
+1. final  不可被继承
+
+2. 实现了Serializable接口：表示字符串支持序列化
+   实现了Comparable接口：表示可以比较大小
+
+3. 内部定义了 final char[] value用于存储字符串数据
+4. 代表不可变的字符序列：简称不可变性
+
+String -> char[] 调用String.toCharArray()
+char[] -> String 调用String的构造器
+
+编码：String -> byte[] 调用String.getBytes()
+解码：byte[] -> String 构造器
