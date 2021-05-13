@@ -1,0 +1,15 @@
+Collection:
+
+一、框架
+    |--collection接口：单列集合，用来存储一个一个的对象
+        |--List接口：存储有序的，可重复的数据 ” 动态“数组
+            |--ArrayList、LinkedList、Vector
+
+
+        |--Set接口：无序的不可重复的数据 ->> 高中的“集合”
+            |--HashSet、LinkedHashSet、TreeSet
+
+    |--Map接口：双列集合，用来存储一对（key，value）数据 ->函数 key与value一对一或者多对一
+            |--HashMap、LinkedHashMap、TreeMap、Hashtable、properties
+
+二、常用方法
