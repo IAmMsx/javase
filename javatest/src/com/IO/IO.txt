@@ -15,3 +15,5 @@ IO
 三、
     1. 对于文本文件(.txt,.java,.c,.cpp)，使用字符流处理 Reader、Writer
     2. 对于非文本文件(.jpg,.mp3,.avi,.ppt等)，使用字节流处理 InputStream、OutputStream
+
+四、 转换流：InputStreamReader 、 OutputStreamReader

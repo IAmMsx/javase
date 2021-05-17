@@ -1,0 +1,45 @@
+
+map:
+
+HashMap常用方法：
+添加：put(Object key,Object value)
+删除：remove(Object key)
+修改：put(Object key,Object value)
+查询：get(Object key)
+长度：size()
+遍历：keySet() / valueSet() / entrySet()
+
+
+    |---Map:双列结构，存储key-value对的数据， ---类似于高中的函数：y=f(x)
+        |---HashMap：作为map的主要实现类，线程不安全，效率高（可以存储null的key与value）
+            |---LinkedHashMap：保证在遍历map元素时，可以按照添加的顺序进行遍历
+                    原因：在原有的HashMap底层结构基础上，添加了一对指针，指向前一个和后一个元素
+                        对于频繁的遍历操作，此类执行效率要高于HashMap
+        |---TreeMap：按照添加的键值对进行排序，实现排序遍历-按照key排
+                    底层使用红黑树
+        |---Hashtable：古老实现类，线程安全
+            |---Properties：常用来处理配置文件，key、value是String
+
+        HashMap底层：数组+链表 JDK7
+                    数组+链表+红黑树 JDK8
+
+面试题：
+    1. HashMap的底层原理
+    2. HashMap与Hashtable的异同
+    3. CurrentHashMap与Hashtable的异同
+
+二、Map的结构理解
+    Map中的key：无序、不可重复，使用Set存储所有的key --->key所在的类要重写equals()与hashCode()
+    Map中的Value：无序的、不可重复的，使用Collection存储所有的value --->所在类要重写equals()
+    一个键值对：key-value构成一个Entry对象
+    Map中的Entry：无序的、不可重复的，使用Set存储所有的entry
+
+三、HashMap的底层实现原理:JDK7
+    HashMap map = new HashMap()
+    实例化以后，底层创建了长度为16的一维数组Entry[] table
+    ******************************************************
+    map.put(k1,v1):
+    首先调用k1所在类的hashCode()计算k1的哈希值，经过处理后得到在Entry中的存放位置
+    如果此位置数据为空，此时k1-v1添加成功
+    如果此位置数据不为空，意味着此位置存在一个或多个数据（链表形式存在），比较key1与已经存在的数据的哈希值
+       如果k1的哈希值与已经存在的数据哈希值不同 P550未看。
