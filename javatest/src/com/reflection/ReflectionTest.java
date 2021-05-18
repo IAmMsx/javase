@@ -16,7 +16,7 @@ public class ReflectionTest {
         p1.age = 10;
         String name = p1.getName();
         p1.show();
-        System.out.println(p1.toString());
+        System.out.println(p1);
 
         //在外部不可以通过类的内部对象调用其私有结构
 
@@ -37,7 +37,27 @@ public class ReflectionTest {
         // 调方法
         Method show = clazz.getDeclaredMethod("show");
         show.invoke(p);
+        // 通过反射可以调用Person类的私有构造器和方法、属性
 
+        // 调用私有的构造器
+        Constructor<Person> cons1 = clazz.getDeclaredConstructor(String.class);
+        cons1.setAccessible(true);
+
+        Person p1 = cons1.newInstance("Jerry");
+        System.out.println(p1);
+
+        // 调用私有的属性
+        Field name = clazz.getDeclaredField("name");
+        name.setAccessible(true);
+        name.set(p1,"HanMeimei");
+        System.out.println(p1);
+
+        // 调用私有的方法
+        Method showNation = clazz.getDeclaredMethod("showNation", String.class);
+        showNation.setAccessible(true);
+        // 调用并返回nation
+        String nation = (String) showNation.invoke(p1,"China");// 相当于p1.showNation("China")
+        System.out.println(nation);
 
     }
 }

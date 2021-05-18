@@ -14,6 +14,7 @@ public class Person {
 
     private Person(String name) {
         this.name = name;
+        System.out.println("private constructor");
     }
 
     public String getName() {
@@ -39,11 +40,13 @@ public class Person {
                 ", age=" + age +
                 '}';
     }
-    public void show(){
+
+    public void show() {
         System.out.println("nihao!woshigeren ");
     }
-    private String showNation(String nation){
-        System.out.println("guojishi："+nation);
+
+    private String showNation(String nation) {
+        System.out.println("guojishi：" + nation);
         return nation;
     }
 }
