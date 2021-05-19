@@ -1,8 +1,9 @@
-package com.reflection;
+package com.reflection.java;
 
 import org.junit.Test;
 
 public class ClassTest {
+
     // 获取Class类实例的方式
     @Test
     public void test3() throws ClassNotFoundException {
@@ -16,7 +17,7 @@ public class ClassTest {
         System.out.println(clazz2);
 
         // 方式三：调用Class的静态方法，forName(String classPath)
-        Class<?> clazz3 = Class.forName("com.reflection.Person");
+        Class<?> clazz3 = Class.forName("com.reflection.java.Person");
         System.out.println(clazz3);
 
         System.out.println(clazz1 == clazz2);//true
@@ -24,7 +25,7 @@ public class ClassTest {
 
         // 方式四：了解。使用类的加载器ClassLoader
         ClassLoader classLoader = ClassTest.class.getClassLoader();
-        Class<?> clazz4 = classLoader.loadClass("com.reflection.Person");
+        Class<?> clazz4 = classLoader.loadClass("com.reflection.java.Person");
         System.out.println(clazz4);
 
         System.out.println(clazz4 == clazz1);

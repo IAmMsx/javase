@@ -1,4 +1,4 @@
-package com.reflection;
+package com.reflection.java;
 
 import org.junit.Test;
 
